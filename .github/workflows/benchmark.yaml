@@ -1,0 +1,21 @@
+name: Benchmark Python JSON libraries
+
+on: push
+
+jobs:
+  benchmark:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Git Repository
+        uses: actions/checkout@v2
+      - name: Benchmark
+        run: make benchmark-docker
+  lint:
+    timeout-minutes: 1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Git Repository
+        uses: actions/checkout@v2
+      - name: Lint
+        run: make lint

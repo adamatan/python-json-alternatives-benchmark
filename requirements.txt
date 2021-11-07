@@ -1,0 +1,11 @@
+orjson
+python-rapidjson
+rapidjson
+ujson
+types-ujson
+types-orjson
+prettytable==2.4.0
+loguru==0.5.3
+pylint==2.11.1
+mypy==0.910
+black==21.10b0
