@@ -1,0 +1,7 @@
+version: "3"
+services:
+  benchmark:
+    build: .
+  lint:
+    build: .
+    command: /scripts/lint.sh
