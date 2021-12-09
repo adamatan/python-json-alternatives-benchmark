@@ -1,15 +1,21 @@
 # Python JSON Benchmark
 [![Test, Lint, Build and Push to ECR](https://github.com/adamatan/python-json-benchmark/actions/workflows/benchmark.yaml/badge.svg)](https://github.com/adamatan/python-json-benchmark/actions)
 
+# How to Run
+Clone the repo and run:
 
-## TL;DR
-[`orjson`](https://github.com/ijl/orjson) is the fastest JSON library I've checked.
+    make
+
+That's it. The only requirements are Docker and Make.
+
+## Results - TL;DR
+[`orjson`](https://github.com/ijl/orjson) is the fastest JSON library tested.
 
 
 ## Full results
 The raw results are available under the [actions tab](https://github.com/adamatan/python-json-benchmark/actions). Pick the latest invocation, click `benchamrk` and exapand `Benchmark`.
 
-The results from [the Github Actions virtual machine](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners) are:
+The latest results from [the Github Actions virtual machine](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners) are:
 
 ### Long JSON text dumps()
 ```bash
@@ -58,7 +64,3 @@ The results from [the Github Actions virtual machine](https://docs.github.com/en
 |    json   |   loads_test  |       1000000        |  5.89s   |    169906.22    |
 +-----------+---------------+----------------------+----------+-----------------+
 ```
-# How to Reproduce
-Clone the repo and run:
-
-    make benchmark-docker
